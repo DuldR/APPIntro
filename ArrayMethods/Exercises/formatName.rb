@@ -6,7 +6,19 @@
 # "abc".upcase # => "ABC"
 
 def format_name(str)
+    newStr = str.split(" ")
 
+    newStr.each do |ele|
+        ele.each_char.with_index do |let, idx|
+            if idx == 0
+                ele[idx] = let.upcase
+            else
+                ele[idx] = let.downcase
+            end
+        end 
+    end
+
+    return newStr.join(" ")
 end
 
 puts format_name("chase WILSON") # => "Chase Wilson"
