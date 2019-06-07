@@ -4,6 +4,20 @@
 
 def reverse_words(sent)
 
+
+    revArr = sent.split(" ")
+    returnArr = []
+
+    revArr.each_with_index do |ele1, idx1|
+        setupArr = []
+        ele1.each_char.with_index do |ele2, idx2|
+            setupArr.unshift(ele2)
+        end
+        returnArr[idx1] = setupArr.join("")
+    end
+
+    return returnArr.join(" ")
+    
 end
 
 puts reverse_words('keep coding') # => 'peek gnidoc'

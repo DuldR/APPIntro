@@ -3,7 +3,22 @@
 # Write a method combinations that takes in an array of unique elements, the method should return a 2D array representing all possible combinations of 2 elements of the array.
 
 def combinations(arr)
+    comboArr = []
 
+    
+    arr.each_with_index do |ele1, idx1|
+        arr.each_with_index do |ele2, idx2|
+            if ele1 == ele2
+                next
+            elsif idx1 <= idx2
+                setupArr = []
+                setupArr[0] = ele1
+                setupArr[1] = ele2
+                comboArr.push(setupArr)
+            end
+        end
+    end
+    return comboArr
 end
 
 print combinations(["a", "b", "c"]); # => [ [ "a", "b" ], [ "a", "c" ], [ "b", "c" ] ]
