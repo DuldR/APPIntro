@@ -4,6 +4,16 @@
 
 def two_d_sum(arr)
 
+  sum = 0
+
+  arr.each do |ele1|
+    ele1.each do |ele2|
+      sum += ele2
+    end
+  end
+
+  return sum
+
 end
 
 array_1 = [

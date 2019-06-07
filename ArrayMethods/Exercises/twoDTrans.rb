@@ -1,10 +1,26 @@
-# Two D Sum
-
-# Write a method two_d_Sum that takes in a two dimensional array and returns the sum of all elements in the array.
-
 def two_d_translate(arr)
 
+  returnArr = []
+  count = 0
+
+  arr.each do |ele1|
+    ele1.each_with_index do |ele2, idx|
+      if idx == 1
+        count = ele2
+      else
+        next
+      end
+    end
+
+    count.times do
+      returnArr << ele1[0]
+    end
+  end
+
+  return returnArr
+
 end
+
 
 arr_1 = [
   ['boot', 3],

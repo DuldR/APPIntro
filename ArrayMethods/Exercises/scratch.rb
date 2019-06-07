@@ -1,15 +1,36 @@
-wut = [1, 2, 3, 4, 5]
-nut = []
+# wut = [[1,2], [3]]
+# but = 0
 
-j = 0
-max = 2
+# wut.each do |ele1|
+#     ele1.each do |ele2|
+#         but += ele2
+#     end
+# end
 
-while j < max
-    wut.push(wut[0])
-    wut.shift()
-    j += 1
+# print but
 
+nut = [
+    ['weiner', 3], 
+    ['peiner', 4],
+    ['leiner', 2]
+]
+
+tut = []
+
+count = 0
+
+nut.each do |ele1|
+    ele1.each_with_index do |ele2, idx|
+        if idx == 1
+            count = ele2
+        else
+            next
+        end  
+    end
+
+    count.times do
+        tut << ele1[0]
+    end
 end
 
-print wut
-    
+print tut

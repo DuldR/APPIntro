@@ -4,6 +4,16 @@
 
 def to_initials(name)
 
+    nameArr = name.split(" ")
+    returnArr = []
+    
+    nameArr.each do |ele|
+        returnArr << ele[0]
+    end
+
+    print returnArr.join("")
+
+
 end
 
 puts to_initials("Kelvin Bridges")      # => "KB"
