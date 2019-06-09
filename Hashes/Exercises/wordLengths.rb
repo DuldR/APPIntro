@@ -1,6 +1,17 @@
 # Write a method word_lengths that takes in a sentence string and returns a hash where every key is a word of the sentence, and its' corresponding value is the length of that word.
 
 def word_lengths(sentence)
+    
+    formSent = sentence.split(" ")
+    wLen = Hash.new(0)
+
+    formSent.each do |ele|
+        wLen[ele] = ele.length
+    end
+
+    return wLen
+
+
 
 end
 
