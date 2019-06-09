@@ -1,7 +1,22 @@
 # Write a method get_full_name that takes in a hash containing a first, last, and title. The method should return a string representing the hash's full name
 
 def get_full_name(hash)
+    returnStr = ""
 
+    hash.each do |k, v|
+
+        if k == "first"
+            returnStr << v
+        elsif k == "last"
+            returnStr << " "
+            returnStr << v
+        else
+            returnStr << ", the "
+            returnStr << v
+        end
+    end
+
+    return returnStr
 end
 
 hash1 = {"first"=>"Michael", "last"=>"Jordan", "title"=> "GOAT"}

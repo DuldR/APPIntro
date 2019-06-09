@@ -1,11 +1,9 @@
-hash = { "name" => "App Academy", "color" => "red" }
+butt = "Hello"
 
-wut = "Hi, hello, how are you doing?"
-but = wut.split(" ")
 b = Hash.new(0)
-
-but.each do |ele|
-    b[ele] = ele.length
+butt.each_char do |let|
+    b[let] += 1
 end
 
 puts b
+

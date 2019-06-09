@@ -2,6 +2,18 @@
 
 def ae_count(str)
 
+    returnHash = Hash.new(0)
+
+    str.each_char do |let|
+        if let == "a" or let == "e"
+            returnHash[let] += 1
+        else
+            next
+        end
+    end
+
+    return returnHash.sort.to_h
+
 end
 
 puts ae_count("everyone can program") #=> {"a"=>2, "e"=>3}
