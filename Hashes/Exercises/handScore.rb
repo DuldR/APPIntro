@@ -2,6 +2,20 @@
 
 def hand_score(hand)
 
+    valueHash = { "A" => 4, "a" => 4, "K" => 3, "k" => 3, "Q" => 2, "q" => 2, "J" => 1, "j" => 1}
+    scoreHash = Hash.new(0)
+    returnInteger = 0
+
+    hand.each_char do |let|
+        scoreHash[let] += 1
+    end
+
+    scoreHash.each do |k, v|
+        returnInteger += (valueHash[k] * v)
+    end
+
+    return returnInteger
+
 end
 
 puts hand_score("AQAJ") #=> 11

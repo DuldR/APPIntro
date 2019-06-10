@@ -1,9 +1,5 @@
-butt = "Hello"
+str = ""
 
-b = Hash.new(0)
-butt.each_char do |let|
-    b[let] += 1
-end
+buttfart = str + 4
 
-puts b
-
+puts buttfart

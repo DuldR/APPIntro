@@ -1,6 +1,14 @@
 # Write a method element_count that takes in an array and returns a hash representing the count of each element in the array.
 
 def element_count(arr)
+    
+    returnHash = Hash.new(0)
+
+    arr.each do |let|
+        returnHash[let] += 1
+    end
+
+    return returnHash
 
 end
 
