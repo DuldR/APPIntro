@@ -4,6 +4,19 @@
 
 def unique_elements(arr)
 
+    setupHash = Hash.new(0)
+    returnArr = []
+
+    arr.each do |ele|
+        setupHash[ele] += 1
+    end
+
+    setupHash.each do |k, v|
+        returnArr << k
+    end
+
+    return returnArr
+
 end
 
 print unique_elements(['a', 'b', 'a', 'a', 'b', 'c']) #=> ["a", "b", "c"]
