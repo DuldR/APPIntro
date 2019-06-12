@@ -4,6 +4,13 @@
 
 def yell_sentence(sent)
 
+    arrSent = sent.split(" ")
+
+    returnArr = arrSent.map { |ele| ele.upcase + "!"}
+
+    return returnArr.join(" ")
+
+
 end
 
 puts yell_sentence("I have a bad feeling about this") #=> "I! HAVE! A! BAD! FEELING! ABOUT! THIS!"

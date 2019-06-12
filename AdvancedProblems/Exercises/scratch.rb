@@ -1,12 +1,20 @@
-pets = [
-    {"type"=>"dog", "name"=>"Rolo"},
-    {"type"=>"cat", "name"=>"Sunny"},
-    {"type"=>"rat", "name"=>"Saki"},
-    {"type"=>"dog", "name"=>"Finn"},
-    {"type"=>"cat", "name"=>"Buffy"}
-  ]
+str = "HellolleH"
+char = "o"
+
+arr = str.chars
+finalArr = []
 
 
-ownage = pets.map { |ele| ele["type"]}
+returnArr =  arr.map.with_index do |ee, idx|
 
-print ownage
+  if ee == "l"
+    idx
+  else
+    0
+  end
+
+end
+
+butts = returnArr.select { |ele| ele > 0 }
+
+print butts[-1]
