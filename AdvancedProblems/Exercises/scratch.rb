@@ -1,20 +1,24 @@
-str = "HellolleH"
-char = "o"
+fart = 100
+isPrime = []
 
-arr = str.chars
-finalArr = []
+arr = Array(2..fart)
 
 
-returnArr =  arr.map.with_index do |ee, idx|
-
-  if ee == "l"
-    idx
-  else
-    0
-  end
-
+def removeEvens(arr2)
+  return arr2.select { |n| n % 2 != 0 || n == 2 }
 end
 
-butts = returnArr.select { |ele| ele > 0 }
+def removeDiv(arr3, eval)
+  return arr3.select { |n2| n2 % eval != 0 || n2 == eval }
+end
 
-print butts[-1]
+
+ifPrime = removeEvens(arr)
+
+
+
+ifPrime.each do |ele| 
+  ifPrime = removeDiv(ifPrime, ele)
+end
+
+print ifPrime
