@@ -1,9 +1,30 @@
 # Perfect Square
 
 # Write a method perfect_square? that takes in a number and returns a boolean indicating whether it is a perfect square. A perfect square is a number that results from multiplying a number by itself. For example, 9 is a perfect square because 3  3 = 9, 25 is a perfect square because 5  5 = 25.
+def factors(num)
 
+    facts = []
+  
+    (1..num).each do |i|
+      if num % i == 0
+        facts << i
+      end
+    end
+  
+    return facts
+end
 
-def perfect_square?(num)
+def perfect_square?(num1)
+
+    factors(num1).each do |ele|
+        if num1 == ele * ele
+            return true
+        else
+            next
+        end
+    end
+
+    return false
 
 end
 

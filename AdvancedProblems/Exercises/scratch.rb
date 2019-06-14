@@ -1,24 +1,19 @@
-fart = 100
-isPrime = []
+def arrSetup(num)
+  total = 0
 
-arr = Array(2..fart)
+  (1..num).each do |ele|
+    total += ele
+  end
 
+  return total
 
-def removeEvens(arr2)
-  return arr2.select { |n| n % 2 != 0 || n == 2 }
 end
 
-def removeDiv(arr3, eval)
-  return arr3.select { |n2| n2 % eval != 0 || n2 == eval }
+seq = [3]
+length = 4
+
+while seq.length < length
+  seq << arrSetup(seq[-1])
 end
 
-
-ifPrime = removeEvens(arr)
-
-
-
-ifPrime.each do |ele| 
-  ifPrime = removeDiv(ifPrime, ele)
-end
-
-print ifPrime
+print seq

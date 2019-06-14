@@ -2,7 +2,23 @@
 
 # Write a method pick_primes that takes in an array of numbers and returns a new array containing only the prime numbers.
 
+def removeEvens(arr2)
+    return arr2.select { |n| n % 2 != 0 || n == 2 }
+  end
+  
+def removeDiv(arr3, eval)
+    return arr3.select { |n2| n2 % eval != 0 || n2 == eval }
+end
+
 def pick_primes(numbers)
+    
+    ifPrime = removeEvens(numbers)
+
+    ifPrime.each do |ele|
+        ifPrime = removeDiv(ifPrime, ele)
+    end
+
+    return ifPrime
 
 end
 
