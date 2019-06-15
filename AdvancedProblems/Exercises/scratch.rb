@@ -1,19 +1,14 @@
-def arrSetup(num)
-  total = 0
+Arr = [1, 2, 3, 4]
+newArr = []
 
-  (1..num).each do |ele|
-    total += ele
-  end
+Arr.each_with_index do |ele, idx|
 
-  return total
-
+  offset = idx + 1
+  
 end
 
-seq = [3]
-length = 4
 
-while seq.length < length
-  seq << arrSetup(seq[-1])
-end
 
-print seq
+
+
+
