@@ -3,6 +3,17 @@
 # Write a method all_else_equal that takes in an array of numbers. The method should return the element of the array that is equal to half of the sum of all elements of the array. If there is no such element, the method should return nil.
 
 def all_else_equal(arr)
+    count = 0
+
+    arr.each do |ele|
+        count += ele
+    end
+
+    if arr.include?(count / 2) == true
+        return (count / 2)
+    else
+        return nil
+    end
 
 end
 

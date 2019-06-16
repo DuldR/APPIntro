@@ -8,6 +8,24 @@
 # 1   4    6
 
 def pyramid_sum(base)
+    final = []
+    seq = []
+    final.unshift(base)
+
+    while final.length < base.length
+        seq = final[0]
+        up = []
+
+        seq[0..-2].each_with_index do |ele, idx|
+            up << (seq[idx] + seq[idx + 1])
+        end
+
+        final.unshift(up)
+
+    end
+
+    return final
+
 
 end
 
