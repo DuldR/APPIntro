@@ -7,6 +7,24 @@
 
 def caesar_cipher(str, num)
 
+    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    returnStr = ""
+
+
+    str.each_char do |let|
+        found = alphabet.index(let)
+
+        if (found + num) > 26
+            offset = alphabet[found + num - 26]
+        else
+            offset = alphabet[found + num]
+        end
+
+        returnStr << offset
+    end
+
+    return returnStr
+
 end
 
 puts caesar_cipher("apple", 1)    #=> "bqqmf"
